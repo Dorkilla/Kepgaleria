@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(245, 245, 220, 0.845);
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.nagykep-container {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 50px; 
+  align-items: center;
+  gap: 10px;
+}
+
+.nagykep {
+  grid-column: 2 / 4; 
+  padding: 20px; 
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 100%; 
+  height: auto; 
+}
+
+button.jobb, button.bal {
+  background-color: #f3b7f6c6;
+  color: black;
+  padding: 10px;
+  border: none;
+  font-size: 40px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #e68ad497;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tartalom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 10px;
+}
+
+.tartalom .kep {
+  position: relative;
+  padding-bottom: 100%;
+  border: 1px solid gray;
+}
+
+.tartalom img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+footer {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+}
+@media (max-width: 700px) {
+  .kep {
+      flex: 1 1 45%; 
+      max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .kep {
+      flex: 1 1 100%; 
+      max-width: 100%;
+  }
+}
